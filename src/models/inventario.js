@@ -2,29 +2,25 @@ const { DataTypes } = require ('sequelize');
 const {sequelize} = require ('../database/database.js');
 
 
-const Product = sequelize.define("product",{
+const Inventario = sequelize.define("inventario",{
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         
     },
-    nombre: {
-        type: DataTypes.STRING
-
-    },
-    marca: {
-        type: DataTypes.STRING
-    },
-    precio: {
+    idProducto: {
         type: DataTypes.INTEGER,
-          
+
     },
     cantidad: {
         type: DataTypes.INTEGER,
-        
-    },
+    }
+    
 },
     {timestamps: true}
 );
 
-module.exports = Product;
+
+
+
+module.exports = Inventario;
