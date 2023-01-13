@@ -3,6 +3,10 @@ const morgan = import("morgan");
 const cors = import('cors');
 const {sequelize} = import('./database/database');
 const tasksRouts = import('./routes/tasks');
+const categoria = import('./models/categoria');
+const inventario = import('./models/inventario');
+const product = import('./models/product');
+
 const app = express();
 
 app.use(cors());
