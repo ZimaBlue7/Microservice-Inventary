@@ -1,5 +1,5 @@
 const { DataTypes } = require ('sequelize');
-const {sequelize} = require ('../database/database.js');
+const {sequelize} = require ('../database/db.js');
 
 
 const Inventario = sequelize.define("inventario",{
@@ -23,4 +23,4 @@ const Inventario = sequelize.define("inventario",{
 
 
 
-module.exports = Inventario;
+exports.Inventario = Inventario;
