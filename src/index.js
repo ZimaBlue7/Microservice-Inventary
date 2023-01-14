@@ -1,11 +1,12 @@
-const express = import('express');
-const morgan = import("morgan");
-const cors = import('cors');
-const {sequelize} = import('./database/database');
-const tasksRouts = import('./routes/tasks');
-const categoria = import('./models/categoria');
-const inventario = import('./models/inventario');
-const product = import('./models/product');
+const express = require('express');
+const morgan = require("morgan");
+const cors = require('cors');
+const {sequelize} = require('./database/db');
+const tasksRouts = require('./routes/tasks');
+const categoria = require('./models/categoria');
+const inventario = require('./models/inventario');
+const product = require('./models/product');
+
 
 const app = express();
 
