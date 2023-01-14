@@ -1,17 +1,4 @@
-const {Router} = require('express');
-const { deleted,select,insert,update } = require('../controllers/crudController');
+const { Router } = require("express");
+import { Router } from "express";
 
-const router = Router();
-
-
-router.get('/seleccionar', select)
-
-router.post('/insertar',insert)
-
-router.delete('/eliminar',deleted)
-
-router.put('/actualizar',update)
-
-
-
-module.exports = router;
+export const router = Router();

@@ -1,30 +1,25 @@
-const { DataTypes } = require ('sequelize');
-const {sequelize} = require ('../database/db.js');
+import { sequelize } from "../database/db.js";
+import { DataTypes } from "sequelize";
 
-
-const Product = sequelize.define("product",{
+export const Product = sequelize.define(
+  "product",
+  {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        
+      type: DataTypes.INTEGER,
+      primaryKey: true,
     },
     nombre: {
-        type: DataTypes.STRING
-
+      type: DataTypes.STRING,
     },
     marca: {
-        type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     precio: {
-        type: DataTypes.INTEGER,
-          
+      type: DataTypes.INTEGER,
     },
     cantidad: {
-        type: DataTypes.INTEGER,
-        
+      type: DataTypes.INTEGER,
     },
-},
-    {timestamps: true}
+  },
+  { timestamps: true }
 );
-
-module.exports = Product;

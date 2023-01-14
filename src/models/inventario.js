@@ -1,26 +1,30 @@
-const { DataTypes } = require ('sequelize');
-const {sequelize} = require ('../database/db.js');
+import { sequelize } from "../database/db.js";
+import { DataTypes } from "sequelize";
+import { Product } from "./Product.js";
 
-
-const Inventario = sequelize.define("inventario",{
+export const Inventario = sequelize.define(
+  "inventario",
+  {
     id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        
+      type: DataTypes.INTEGER,
+      primaryKey: true,
     },
     idProducto: {
-        type: DataTypes.INTEGER,
-
+      type: DataTypes.INTEGER,
     },
     cantidad: {
-        type: DataTypes.INTEGER,
-    }
-    
-},
-    {timestamps: true}
+      type: DataTypes.INTEGER,
+    },
+  },
+  { timestamps: true }
 );
 
+Inventario.hasMany(Product, {
+  foreignKey: "inventarioId",
+  sourcekey: "id",
+});
 
-
-
-exports.Inventario = Inventario;
+Product.belongsTo(Inventario, {
+  foreignKey: "inventariotId",
+  targetId: "id",
+});
