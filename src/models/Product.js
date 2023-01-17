@@ -27,6 +27,12 @@ export const Product = sequelize.define(
     cantidad: {
       type: DataTypes.INTEGER,
     },
+    descripcion: {
+        type: DataTypes.STRING,
+      },
+    promocion: {
+        type: DataTypes.BOOLEAN,
+      }, 
   },
   { timestamps: true }
 );
