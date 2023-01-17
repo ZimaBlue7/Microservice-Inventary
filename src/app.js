@@ -13,3 +13,4 @@ app.use(productsRoutes);
 app.use(categoryRoutes);
 app.use(inventaryRoutes);
 export default app;
+
