@@ -8,6 +8,7 @@ export const Inventario = sequelize.define(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     idProducto: {
       type: DataTypes.INTEGER,
@@ -21,10 +22,8 @@ export const Inventario = sequelize.define(
 
 Inventario.hasMany(Product, {
   foreignKey: "idProducto",
-  
 });
 
 Product.belongsTo(Inventario, {
   foreignKey: "idProducto",
-  
 });

@@ -1,6 +1,6 @@
 import { sequelize } from "../database/db.js";
 import { DataTypes } from "sequelize";
-import {Categoria} from "./Categoria.js";
+import { Categoria } from "./Categoria.js";
 
 export const Product = sequelize.define(
   "product",
@@ -8,6 +8,7 @@ export const Product = sequelize.define(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     nombre: {
       type: DataTypes.STRING,
@@ -28,11 +29,11 @@ export const Product = sequelize.define(
       type: DataTypes.INTEGER,
     },
     descripcion: {
-        type: DataTypes.STRING,
-      },
+      type: DataTypes.STRING,
+    },
     promocion: {
-        type: DataTypes.BOOLEAN,
-      }, 
+      type: DataTypes.BOOLEAN,
+    },
   },
   { timestamps: true }
 );
