@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
   getCantidadProduct,
   getCantidadTotal,
-} from "../controllers/inventary.controller";
+} from "../controllers/inventary.controller.js";
 
 const router = Router();
 

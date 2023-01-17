@@ -1,7 +1,7 @@
 import app from "./app.js";
 import { sequelize } from "./database/db.js";
 
-const app = express();
+//const app = express();
 
 async function main() {
   try {
