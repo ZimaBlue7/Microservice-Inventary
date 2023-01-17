@@ -8,9 +8,6 @@ export const Categoria = sequelize.define(
       types: DataTypes.INTEGER,
       primaryKey: true,
     },
-    id_producto: {
-      types: DataTypes.INTEGER,
-    },
     nombre: {
       types: DataTypes.STRING,
     },

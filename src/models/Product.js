@@ -30,3 +30,11 @@ export const Product = sequelize.define(
   },
   { timestamps: true }
 );
+
+Categoria.hasMany(Product, {
+  foreignKey: "id_categoria",
+});
+
+Product.belongsTo(Categoria, {
+  foreignKey: "id_categoria",
+});
