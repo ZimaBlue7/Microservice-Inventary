@@ -5,12 +5,12 @@ export const Categoria = sequelize.define(
   "categoria",
   {
     id: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     nombre: {
-      types: DataTypes.STRING,
+      type: DataTypes.STRING,
     },
   },
   { timestamps: true }
