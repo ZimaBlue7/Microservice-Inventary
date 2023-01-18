@@ -7,6 +7,7 @@ export const Categoria = sequelize.define(
     id: {
       types: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     nombre: {
       types: DataTypes.STRING,
