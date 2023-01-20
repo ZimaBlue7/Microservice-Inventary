@@ -13,5 +13,5 @@ export const Categoria = sequelize.define(
       type: DataTypes.STRING,
     },
   },
-  { timestamps: true }
+  { timestamps: false }
 );
