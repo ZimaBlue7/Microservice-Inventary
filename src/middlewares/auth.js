@@ -21,7 +21,9 @@ export const verifyToken = async (req, res, next) => {
 };
 
 export const isAdmin = async (req, res, next) => {
-  if (!req.body.roles.include("Admin"))
+  const { roles } = req.body;
+  console.log(roles);
+  if (!roles.includes("Admin"))
     return res.status(403).send({ message: "Unauthorized access" });
   next();
 };
