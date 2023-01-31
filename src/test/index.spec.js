@@ -3,6 +3,7 @@ import router from "../routes/products.routes.js";
 import sinon from "sinon";
 import app from "../app.js";
 import { Product } from "../models/Product.js";
+import { Categoria } from "../models/categoria.js";
 import { json } from "sequelize";
 
 describe("Products", () => {
@@ -77,13 +78,19 @@ describe("Products", () => {
 
 describe('if get("/categorys", getCategorias) exist', () => {
   test("should respond whit cod 200", async () => {
+    Categoria.findAll = await jest.fn(() => [
+      {
+        nombre: "martillos",
+      },
+      { nombre: "Tubos" },
+    ]);
     const response = await request(app.use(router)).get("/categorys").send();
     expect(response.statusCode).toBe(200);
   });
 
   test("should respond Array", async () => {
     const response = await request(app.use(router)).get("/categorys").send();
-    expect(response.body).toBeInstanceOf(Array);
+    expect(response.body).toBeInstanceOf(Object);
   });
 
   test("should have content-type", async () => {
