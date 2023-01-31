@@ -1,4 +1,5 @@
 import { Product } from "../models/Product.js";
+import { uploadFile } from "../aws/s3.js";
 
 export const getProducts = async (req, res) => {
   try {
